@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyTune</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/977a29eff2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">TinyTune</a>
+            </div>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <nav class="navbar2">
+                <a href="main.html">Home</a>
+                <a href="#" class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <main class="two-column">
+            <div class="about-form">
+                <h1>About TinyTune</h1>
+                <p>TinyTune is a lightweight library for prompt tuning and managing interactions with Language Models (LLMs), enabling modular, prompt-based workflows.</p>
+                
+                <h2>Key Features</h2>
+                <ul>
+                    <li>LLM-agnostic: Works with various Language Model contexts (e.g., GPT, Perplexity)</li>
+                    <li>Prompt Jobs: Encapsulate specific tasks or actions within the pipeline</li>
+                    <li>Pipelines: Manage and execute sequences of prompt jobs</li>
+                    <li>Flexible Context Management: Handle different types of LLM contexts</li>
+                    <li>Tool Integration: Easily convert functions into callable tools for language models</li>
+                </ul>
+                
+                <h2>Core Components</h2>
+                <h3>LLMContext</h3>
+                <p>The LLMContext class represents a context for a language model. It manages messages, a message queue, and callbacks.</p>
+                
+                <h3>Prompt Jobs</h3>
+                <p>Prompt jobs are functions designed to execute user-defined prompts on the specified LLM and enable performing logic on the results. They are crucial for orchestrating complex interactions with the language model.</p>
+                
+                <h3>Pipelines</h3>
+                <p>A pipeline is a managed container that maintains a queue of prompt jobs and runs them in sequence. The results of each job are passed to the next one in the queue.</p>
+                
+                <h3>Tools</h3>
+                <p>Tools in TinyTune are functions decorated with the @tool decorator. This decorator extracts metadata from the function's docstring, making it easier to integrate custom functions into your LLM workflows.</p>
+                
+                <h2>Getting Started</h2>
+                <ol>
+                    <li>Install TinyTune: <code>pip install tinytune</code></li>
+                    <li>Import necessary components</li>
+                    <li>Set up your LLM context(s)</li>
+                    <li>Create custom tools using the @tool decorator</li>
+                    <li>Define your prompt jobs using the @prompt_job decorator</li>
+                    <li>Create a pipeline and add your jobs</li>
+                    <li>Run the pipeline to execute your workflow</li>
+                </ol>
+                
+                <p>For more detailed information and advanced usage, please refer to the documentation.</p>
+            </div>
+            <div class="cube-column">
+                <div class="about-cube">
+                    <div class="cube">
+                        <div class="cube-face front">T</div>
+                        <div class="cube-face back">I</div>
+                        <div class="cube-face right">N</div>
+                        <div class="cube-face left">Y</div>
+                        <div class="cube-face top">U</div>
+                        <div class="cube-face bottom">E</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 TinyTune. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
